@@ -1,15 +1,23 @@
 import xlrd
 import re
+import os
+import sys
 from jinja2 import Environment, FileSystemLoader
 import pandas
 import datetime
 import docx
 
-def get_client_name():
+indir = '/Users/Michael/PycharmProjects/uTestLogger/fun/uTestLogger/input'
+for root, dirs, filenames in os.walk(indir):
+    for f in filenames:
+        print "My file:", f
 
+
+def get_client_name():
+    
     pass
 
-book = xlrd.open_workbook("testDataSheet2.xls")
+book = xlrd.open_workbook("/Users/Michael/PycharmProjects/uTestLogger/fun/uTestLogger/input/testDataSheet2.xls")
 
 backgroundSheetName = "Background"
 
